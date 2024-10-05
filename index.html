@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>drand PassGen</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>drand Password Generator</h1>
+
+    <!-- password options form -->
+    <div class="options">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="4" max="128" value="24">
+
+        <label><input type="checkbox" id="lowercase" checked> Include Lowercase Letters</label>
+        <label><input type="checkbox" id="uppercase" checked> Include Uppercase Letters</label>
+        <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+        <label><input type="checkbox" id="symbols"> Include Symbols</label>
+
+        <!-- password generation button -->
+        <button id="generate">Generate Password</button>
+    </div>
+
+    <!-- generated password display -->
+    <div class="result">
+        <h2>Your Password:</h2>
+        <p id="password"></p>
+    </div>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
