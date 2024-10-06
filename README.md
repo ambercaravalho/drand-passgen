@@ -2,7 +2,7 @@
 
 [![Deploy drand-passgen files to GitHub Pages](https://github.com/ambercaravalho/drand-passgen/actions/workflows/static-html-deployment.yml/badge.svg)](https://github.com/ambercaravalho/drand-passgen/actions/workflows/static-html-deployment.yml)
 
-![Homepage Screenshot](homepage-screenshot.png)
+![Homepage Screenshot](src/homepage-screenshot.png)
 
 <div align="center">
 
