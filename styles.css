@@ -1,24 +1,182 @@
+/* reset default styles for consistency across browsers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* default body styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
     text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* main heading styling */
+h1 {
+    margin-bottom: 30px;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* options container styling */
 .options {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 20px auto;
 }
 
+/* labels and input styling */
 .options label {
-    display: block;
+    display: flex;
+    align-items: center;
     margin: 10px 0;
+    font-size: 1em;
 }
 
+.options input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+/* checkbox styling */
+.options input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* generate button styling */
+button#generate {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.25em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button#generate:hover {
+    background-color: #ffdb4d;
+}
+
+/* result display styling */
 .result {
-    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
     word-break: break-all;
 }
 
-button {
+.result h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+/* password container styling */
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-container p {
+    margin-right: 10px;
+    word-break: break-all;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+/* copy button styling */
+#copyButton {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
     padding: 10px 20px;
+    border-radius: 50px;
     font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copyButton:hover {
+    background-color: #ffdb4d;
+}
+
+/* hint styling */
+.hint {
+    font-style: italic;
+    color: #ddd;
+}
+
+/* footer styling */
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* mobile responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .options, .result {
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    button#generate, #copy {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .password-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .password-container p {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
 }
