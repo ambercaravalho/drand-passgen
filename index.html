@@ -7,6 +7,17 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- viewport tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon references -->
+    <link rel="icon" type="image/png" href="/src/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <link rel="shortcut icon" href="/src/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="PassGen" />
+    <link rel="manifest" href="/src/site.webmanifest" />
 </head>
 
 <body>
@@ -29,8 +40,16 @@
     <!-- generated password display -->
     <div class="result">
         <h2>Your Password:</h2>
-        <p id="password"></p>
+        <div class="password-container">
+            <p id="password" class="hint">Your password will appear here</p>
+            <button id="copyButton" title="Copy Password">Copy</button>
+        </div>
     </div>
+
+    <!-- Footer with placeholder links -->
+    <footer>
+        <p>Made by Amber Caravalho with 💖 | <a href="https://ambercaravalho.com">My Website</a> | <a href="https://github.com/ambercaravalho/drand-passgen">About This Project ↗️</a></p>
+    </footer>
 
     <!-- javascript -->
     <script src="script.js"></script>

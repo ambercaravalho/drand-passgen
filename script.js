@@ -120,9 +120,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // display the generated password
         passwordDisplay.textContent = passwordArray.join('');
+
+        // Remove the hint styling class
+        passwordDisplay.classList.remove('hint');
     }
 
+    /**
+     * Function to copy the password to the clipboard.
+     */
+    function copyPassword() {
+        const password = passwordDisplay.textContent;
+        if (password && !passwordDisplay.classList.contains('hint')) {
+            // create a temporary textarea element to select the text
+            const textarea = document.createElement('textarea');
+            textarea.value = password;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                alert('Password copied to clipboard!');
+            } catch (err) {
+                console.error('Failed to copy password:', err);
+                alert('Failed to copy password.');
+            }
+            document.body.removeChild(textarea);
+        } else {
+            alert('Nothing to copy. Please generate a password first.');
+        }
+    }
+    
     // run the password generation function when the button is clicked
     generateButton.addEventListener('click', generatePassword);
+
+    // Add event listener to the copy button
+    copyButton.addEventListener('click', copyPassword);
 
 });
